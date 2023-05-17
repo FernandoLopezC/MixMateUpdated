@@ -25,8 +25,8 @@
     <TextView
             android:text="@string/home_paragraph"
             android:textSize="20dp"
-            android:layout_width="330dp"
-            android:layout_height="348dp"
+            android:layout_width="332dp"
+            android:layout_height="375dp"
             android:gravity="center"
             android:ems="10"
             android:id="@+id/editTextTextMultiLine"

@@ -20,7 +20,7 @@
 
     <string name="home_text">Welcome to MixMate</string>
 
-    <string name="home_paragraph">This app is designed to make your music go to the next level.\n\nThis app allows you to mix your songs to your own taste in order to take your listening experience to the next level.\n\nPlease consider supporting the app by subscribing to the premium version which lets you use special effects and other special features</string>
+    <string name="home_paragraph">This app is designed to make your music go to the next level.\n\nThis app allows you to mix your songs to your own taste in order to take your listening experience to the next level.\n\nPlease consider supporting the app by subscribing to the premium version which lets you use special effects and other special features\n\nFollow the following link in order to get the tutorials for this</string>
 
 
     <string name="login_text">Please login</string>
