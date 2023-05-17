@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".MainActivity"
+                                                   android:background="@drawable/background2">
+
+    <!-- Top Effects Panel-->
+    <TextView
+            android:id="@+id/TopTitleTrack1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:text="Cue 1"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/TopTitleTrack2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:text="Cue 2"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+            android:id="@+id/SkipTrack1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/guideline10"
+            app:layout_constraintEnd_toStartOf="@+id/guideline11"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/guideline9"
+            app:srcCompat="@drawable/skiptrack" />
+
+    <ToggleButton
+            android:id="@+id/SetLooping1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="right"
+            android:background="@drawable/loopingtogglebutton"
+            app:layout_constraintBottom_toTopOf="@+id/guideline10"
+            app:layout_constraintEnd_toStartOf="@+id/guideline12"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline11"
+            app:layout_constraintTop_toTopOf="@+id/guideline9"
+            app:layout_constraintVertical_bias="0.0" />
+    <ToggleButton
+            android:id="@+id/SetLooping2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="right"
+            android:background="@drawable/loopingtogglebutton"
+            app:layout_constraintBottom_toTopOf="@+id/guideline10"
+            app:layout_constraintEnd_toStartOf="@+id/guideline12"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline11"
+            app:layout_constraintTop_toTopOf="@+id/guideline9"
+            app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/guideline10"
+            app:layout_constraintEnd_toStartOf="@+id/guideline13"
+            app:layout_constraintStart_toStartOf="@+id/guideline12"
+            app:layout_constraintTop_toTopOf="@+id/guideline9">
+
+        <SeekBar
+                android:id="@+id/SpeedBar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressTint="#7C7C7C"
+                android:thumbTint="#7C7C7C" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/SpeedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="4dp"
+                    android:text="Speed"
+                    android:textColor="#FFFFFF" />
+
+            <ImageButton
+                    android:id="@+id/ResetSpeed1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    app:srcCompat="@drawable/ic_action_name" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Same thing again, for Track player 2-->
+    <ImageButton
+            android:id="@+id/SkipTrack2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/guideline10"
+            app:layout_constraintEnd_toStartOf="@+id/guideline11"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/guideline9"
+            app:srcCompat="@drawable/skiptrack" />
+
+    <Button
+            android:id="@+id/ReverbButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/cardview_light_background"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="15dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="Reverb"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="8sp"
+            app:iconPadding="0dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="0.421"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+    <Button
+            android:id="@+id/BassBoostButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/cardview_light_background"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="15dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="Bass Boost"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="8sp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline10"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline13" />
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/guideline10"
+            app:layout_constraintEnd_toStartOf="@+id/guideline13"
+            app:layout_constraintStart_toStartOf="@+id/guideline12"
+            app:layout_constraintTop_toTopOf="@+id/guideline9">
+
+        <SeekBar
+                android:id="@+id/SpeedBar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressTint="#7C7C7C"
+                android:thumbTint="#7C7C7C" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/SpeedText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="4dp"
+                    android:text="Speed"
+                    android:textColor="#FFFFFF" />
+
+            <ImageButton
+                    android:id="@+id/ResetSpeed2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    app:srcCompat="@drawable/ic_action_name" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom Media Player -->
+
+    <TextView
+            android:id="@+id/TitleTrack1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingTop="2dp"
+            android:text="Cue 1"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/GuidelineRow1"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+            android:id="@+id/FileTrack1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#CD858383"
+            android:text="Add To\nCue"
+            android:textColor="@android:color/secondary_text_light"
+            app:layout_constraintBottom_toTopOf="@+id/GuidelineRow1end"
+            app:layout_constraintEnd_toStartOf="@+id/PlayTrack1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Track1EffectsButton"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/GuidelineRow1" />
+
+    <ImageButton
+            android:id="@+id/PlayTrack1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/GuidelineRow1end"
+            app:layout_constraintEnd_toStartOf="@+id/guideline12"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/FileTrack1"
+            app:layout_constraintTop_toTopOf="@+id/GuidelineRow1"
+            app:srcCompat="@drawable/playtrack" />
+
+    <SeekBar
+            android:id="@+id/VolumeBar1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:max="100"
+            android:paddingLeft="32dp"
+            android:paddingTop="10dp"
+            android:progressTint="#CD858383"
+            android:thumbTint="#CD858383"
+            app:layout_constraintBottom_toTopOf="@+id/GuidelineRow1end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toTopOf="@+id/GuidelineRow1" />
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/GuidelineRow1end"
+            app:layout_constraintEnd_toStartOf="@+id/VolumeBar1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/PlayTrack1"
+            app:layout_constraintTop_toTopOf="@+id/GuidelineRow1">
+
+        <TextView
+                android:id="@+id/SongProgress1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingLeft="10dp"
+                android:text="00:00 / 00:00"
+                android:textSize="14sp" />
+
+        <SeekBar
+                android:id="@+id/SeekBar1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressTint="#CD858383"
+                android:thumbTint="#CD858383" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GuidelineRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.48" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GuidelineRow1end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GuidelineRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.68" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GuidelineRow2end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.80" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GuidelineColumn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/AdSpace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.90" />
+
+    <ImageButton
+            android:id="@+id/Track1EffectsButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/GuidelineRow1end"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/GuidelineColumn1"
+            app:layout_constraintTop_toTopOf="@+id/GuidelineRow1"
+            app:srcCompat="@drawable/tracksettings" />
+
+    <ImageButton
+            android:id="@+id/Track2EffectsButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/GuidelineRow2end"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@+id/GuidelineColumn1"
+            app:layout_constraintTop_toTopOf="@+id/GuidelineRow2"
+            app:srcCompat="@drawable/tracksettings" />
+
+    <TextView
+            android:id="@+id/TitleTrack2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingTop="2dp"
+            android:text="Cue 2"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/GuidelineRow2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/GuidelineRow1end" />
+
+    <Button
+            android:id="@+id/FileTrack2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#CD858383"
+            android:text="Add To\nCue"
+            android:textColor="@android:color/secondary_text_light"
+            app:layout_constraintBottom_toTopOf="@+id/GuidelineRow2end"
+            app:layout_constraintEnd_toStartOf="@+id/PlayTrack2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Track2EffectsButton"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/GuidelineRow2" />
+
+    <ImageButton
+            android:id="@+id/PlayTrack2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/GuidelineRow2end"
+            app:layout_constraintEnd_toStartOf="@+id/guideline12"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/FileTrack2"
+            app:layout_constraintTop_toTopOf="@+id/GuidelineRow2"
+            app:srcCompat="@drawable/playtrack" />
+
+    <SeekBar
+            android:id="@+id/VolumeBar2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:max="100"
+            android:paddingLeft="32dp"
+            android:paddingTop="8dp"
+            android:progressTint="#CD858383"
+            android:thumbTint="#CD858383"
+            app:layout_constraintBottom_toTopOf="@+id/GuidelineRow2end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout2"
+            app:layout_constraintTop_toTopOf="@+id/GuidelineRow2" />
+
+    <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/GuidelineRow2end"
+            app:layout_constraintEnd_toStartOf="@+id/VolumeBar2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/PlayTrack2"
+            app:layout_constraintTop_toTopOf="@+id/GuidelineRow2">
+
+        <TextView
+                android:id="@+id/SongProgress2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingLeft="10dp"
+                android:text="00:00 / 00:00"
+                android:textSize="14sp" />
+
+        <SeekBar
+                android:id="@+id/SeekBar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progressTint="#CD858383"
+                android:thumbTint="#CD858383" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.14" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.29" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.26" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.37" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.59" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.71" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

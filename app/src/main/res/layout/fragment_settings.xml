@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.settings.SettingsFragment">
+    <TextView
+            android:text="dark mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.139"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.151"/>
+    <TextView
+            android:text="Text size "
+            android:layout_width="67dp"
+            android:layout_height="16dp" android:id="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.159"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="48dp"/>
+    <Spinner
+            android:layout_width="271dp"
+            android:layout_height="58dp" android:id="@+id/sizes_spinner"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintVertical_bias="0.047"/>
+    <RadioGroup
+            android:layout_width="194dp"
+            android:layout_height="93dp"
+            app:layout_constraintStart_toEndOf="@+id/textView2" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.438" app:layout_constraintVertical_bias="0.123"
+            android:id="@+id/radioGroup">
+        <RadioButton
+                android:text="@string/settings_darkmode_disabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/radioButton"/>
+        <RadioButton
+                android:text="@string/settings_darkmode_enabled"
+                android:layout_width="match_parent"
+                android:layout_height="58dp" android:id="@+id/radioButton2"/>
+    </RadioGroup>
+    <TextView
+            android:text="@string/menu_settings"
+            android:layout_width="349dp"
+            android:layout_height="39dp" android:id="@+id/textView6"
+            android:gravity="center"
+            android:textSize="22dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
