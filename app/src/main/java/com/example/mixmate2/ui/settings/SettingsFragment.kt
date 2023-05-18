@@ -1,6 +1,8 @@
 package com.example.mixmate2.ui.settings
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +10,6 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.mixmate2.R
-import com.example.mixmate2.databinding.FragmentSettingsBinding
 
 
 class SettingsFragment : Fragment() {
@@ -27,8 +28,10 @@ class SettingsFragment : Fragment() {
 
         val root: View = inflater.inflate(R.layout.fragment_settings, container, false)
 
+        val linkTextView = root.findViewById<TextView>(R.id.textView4);
+        linkTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
-
+        activity!!.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         return root
     }

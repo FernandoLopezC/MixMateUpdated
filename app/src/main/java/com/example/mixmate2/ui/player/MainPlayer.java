@@ -78,14 +78,14 @@ public class MainPlayer extends Fragment {
 
         super.onCreate(savedInstanceState);
 
-        getParentFragmentManager().setFragmentResultListener("requestKey", this, new FragmentResultListener() {
-                    @Override
-                    public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
-                        // We use a String here, but any type that can be put in a Bundle is supported.
-                        String result = bundle.getString("bundleKey");
-                        // Do something with the result.
-                    }
-        });
+//        getParentFragmentManager().setFragmentResultListener("requestKey", this, new FragmentResultListener() {
+//                    @Override
+//                    public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle bundle) {
+//                        // We use a String here, but any type that can be put in a Bundle is supported.
+//                        String result = bundle.getString("bundleKey");
+//                        // Do something with the result.
+//                    }
+//        });
         TopTitleTrack1 = view.findViewById(R.id.TopTitleTrack1);
         TopTitleTrack2 = view.findViewById(R.id.TopTitleTrack2);
         ImageButton SkipTrack1 = view.findViewById(R.id.SkipTrack1);

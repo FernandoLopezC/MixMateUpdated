@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MIxMate2</string>
+    <string name="app_name">MixMate2</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">MixMate App</string>
@@ -20,8 +20,9 @@
 
     <string name="home_text">Welcome to MixMate</string>
 
-    <string name="home_paragraph">This app is designed to make your music go to the next level.\n\nHere, mix your songs to your own taste in order to improve your listening experience to the max.\n\nPlease consider supporting the app by subscribing to the premium version which lets you use special effects and other special features.\n\nCopy the following link to find tutorials.</string>
+    <string name="home_paragraph">This app is designed to make your music go to the next level.\n\nHere, mix your songs to your own taste in order to improve your listening experience to the max.\n\nPlease consider supporting the app by subscribing to the premium version which lets you use special effects and other special features.\n\nFind a YouTube link for tutorials in settings.</string>
 
+    <string name="tutorial_text"><a href="https://youtu.be/EtH-lQ_AF-k"> YouTube Tutorial</a></string>
 
     <string name="login_text">Log in</string>
     <string-array name="sizes">
