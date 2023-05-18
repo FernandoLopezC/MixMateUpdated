@@ -1,5 +1,6 @@
 package com.example.mixmate2.ui.home
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
@@ -31,7 +32,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
         root.findViewById<TextView>(R.id.editTextTextMultiLine).setMovementMethod(ScrollingMovementMethod());
-
+        activity!!.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         return root
     }
