@@ -72,26 +72,33 @@ class RegisterFragment : androidx.fragment.app.Fragment() {
 //                }
                 client.newCall(request).enqueue(object : Callback {
                     override fun onFailure(call: Call, e: IOException) {
+
+                        activity?.runOnUiThread {
+                            Toast.makeText(activity?.applicationContext, "Registration Failed invalid inputs.", Toast.LENGTH_SHORT)
+                                .show()
+                            val navController = root.findNavController()
+                        }
                         return
                     }
 
                     override fun onResponse(call: Call, response: Response) {
-                        if (!response.isSuccessful){
-                            return
-                        }
-
-                        try {
+                        if (response.isSuccessful){
                             content = JSONObject(response.body?.string() ?: "")
+                            if (content["registration"] == true){
                             activity?.runOnUiThread {
-                                Toast.makeText(activity?.applicationContext, "Login Successful", Toast.LENGTH_SHORT)
+                                Toast.makeText(activity?.applicationContext, "Registration Successful", Toast.LENGTH_SHORT)
                                     .show()
                                 val navController = root.findNavController()
                                 navController.navigate(R.id.nav_home)
+                            }}
+                            else{
+                                activity?.runOnUiThread {
+                                    Toast.makeText(activity?.applicationContext, "Registration Failed invalid inputs.", Toast.LENGTH_SHORT)
+                                        .show()
+                                    val navController = root.findNavController()
+                                }
                             }
-
-                        }
-                        catch (e: JSONException) {
-                            // Error parsing JSON object
+                            return
                         }
                     }
 
