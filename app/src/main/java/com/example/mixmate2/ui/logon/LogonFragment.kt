@@ -2,6 +2,7 @@ package com.example.mixmate2.ui.logon
 
 import android.app.Activity
 import android.content.Context
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -47,7 +48,7 @@ class LoginFragment : Fragment() {
     ): View? {
         val rootView: View = inflater.inflate(R.layout.fragment_login, container, false)
 
-
+        activity!!.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         // Inflate the layout for this fragment
         val registerScreen = rootView.findViewById<View>(R.id.link_to_register) as TextView
 
