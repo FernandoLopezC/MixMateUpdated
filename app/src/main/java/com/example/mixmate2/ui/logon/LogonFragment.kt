@@ -106,6 +106,7 @@ class LoginFragment : Fragment() {
         return rootView
     }
 
+
     fun loginUser(content: JSONObject?, rootView: View?): Boolean{
 
         if (content?.get("login")  == true) {

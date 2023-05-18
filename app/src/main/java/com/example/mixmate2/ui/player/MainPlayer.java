@@ -33,6 +33,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
 import static androidx.fragment.app.FragmentKt.setFragmentResultListener;
 
 public class MainPlayer extends Fragment {
@@ -527,6 +528,7 @@ public class MainPlayer extends Fragment {
         SpeedText2.setVisibility(View.GONE);
         ReverbButton.setVisibility(View.GONE);
         BassBoostButton.setVisibility(View.GONE);
+        getActivity().setRequestedOrientation(SCREEN_ORIENTATION_LANDSCAPE);
         return view;
     }
 
